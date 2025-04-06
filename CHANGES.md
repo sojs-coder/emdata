@@ -1,6 +1,49 @@
 # Changes
 
-# 4.1.1
+# 4.2.1
+This was a bug-fix only release.
+
+- Core-fetch failsafe now fetches a pinned version (Thanks to [@gantoine](https://github.com/n-at))
+- Fixes video rotation on the arcade core (Thanks to [@allancoding](https://github.com/allancoding))
+- Fixes switching between cores.
+- Change: Localstorage settings are now stored by game instead of by system.
+- Fixed gamepad input for c-down.
+- Fixed RetroArch always assuming save is `.srm`.
+- Fixed EJS exit event
+- Hide the "save/load save files" buttons if unsupported.
+- Corrects the order of the core list.
+- Corrects behaviour of the placement of bios/parent/patch files.
+- Fixed rar decompression.
+- Fixed picodrive core (`sega32x`)
+- Fixed libretro-uae core (`amiga`)
+
+# 4.2.0 [View Tree](https://github.com/EmulatorJS/EmulatorJS/tree/8d42d53d4fdf0166f71eaa07529cadf93350b76e)
+In my opinion, this is the most stable release we've had in a while. Many features added in this release were just side affects of fixing up some bugs.
+
+- Let same_cdi core handle zipped bios file directly (Thanks to [@pastisme](https://github.com/pastisme))
+- Fix audio sliders/mute button (Thanks to [@n-at](https://github.com/n-at))
+- Add ability to rotate video (Thanks to [@allancoding](https://github.com/allancoding))
+- Added persian `fa-AF` language (Thanks to [@iits-reza](https://github.com/iits-reza))
+- Added more catches for a start-game error
+- Fixed default webgl2 option
+- Organized settings menu, by dividing entries into sub-menus
+- Fixed the EmulatorJS exit button
+- Added the ability to internally add configurable retroarch.cfg variables
+- Fixed default settings being saved to localstorage
+- Fixed in browser SRM saves (finally)
+- Read save state from WebAssembly Memory
+- Fixed an issue when loading PPSSPP assets
+- Refactored the internal downloadFile function to be promised based instead of callback based
+- Added checks if core requires threads or webgl2
+- Added ability to switch between cores in the settings menu
+- Added the ability to enable/disable threads if SharedArrayBuffer is defined
+- Added a PSP controller scheme for the control settings menu
+- Fixed the volume slider background height in firefox
+- Added handling for lightgun devices
+- Refactored the EmulatorJS `build-emulatorjs.sh` build script
+- Added `ppsspp` core
+
+# 4.1.1 [View Tree](https://github.com/EmulatorJS/EmulatorJS/tree/4951a28de05e072acbe939f46147645a91664a07)
 - Fixed 2xScaleHQ and 2xScaleHQ shaders (Thanks to [@n-at](https://github.com/n-at))
 - Added Vietnamese (`vi-VN`) (Thanks to [@TimKieu](https://github.com/TimKieu))
 - Disable CUE generation for the PUAE core (Thanks to [@michael-j-green](https://github.com/michael-j-green))
